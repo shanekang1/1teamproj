@@ -14,3 +14,4 @@
 # 각자 맡은 역할
 
 # flow + UI(gif 파일이면 더 좋음)
+[My First Board.pdf](https://github.com/user-attachments/files/22997365/My.First.Board.pdf)
