@@ -1,0 +1,214 @@
+/* ===========================
+   TopBar
+=========================== */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===========================
+   햄버거 + 사업장
+=========================== */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hamburger {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.hamburger span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #111827;
+  border-radius: 2px;
+}
+
+.hamburger:hover {
+  background: #f3f4f6;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 사업장 버튼 */
+.biz-selector {
+  position: relative;
+}
+
+.biz-selector .chev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0 10px;
+  height: 36px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.biz-selector .chev:hover {
+  background: #f3f4f6;
+}
+
+.biz-selector .dropdown {
+  position: absolute;
+  top: 42px;
+  left: 0;
+  width: 220px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.1);
+  padding: 6px;
+  animation: fadeIn 0.15s ease-in;
+}
+
+/* ===========================
+   마이페이지 + 팝오버
+=========================== */
+.profile {
+  position: relative;
+}
+
+/* 마이페이지 */
+.profile .btn {
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #111827;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.profile .btn:hover {
+  background: #f3f4f6;
+  border-color: #cbd5e1;
+}
+
+.profile .btn:active {
+  background: #e5e7eb;
+  transform: translateY(1px);
+}
+
+.profile .btn:focus {
+  outline: 2px solid #93c5fd;
+  outline-offset: 1px;
+}
+
+/* 로그인 */
+.btn-login {
+  height: 36px;
+  padding: 0 16px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.btn-login:hover {
+  background: #1e3a8a;
+}
+
+.btn-login:active {
+  background: #1e40af;
+}
+
+/* 팝오버형 드롭다운 */
+.profile-dropdown {
+  position: absolute;
+  top: 44px;
+  right: 0;
+  width: 180px;
+  list-style: none;
+  padding: 6px 0;
+  margin: 0;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.1);
+  animation: fadeIn 0.15s ease-in;
+}
+
+.profile-dropdown li {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.profile-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.profile-dropdown a {
+  display: block;
+  padding: 9px 14px;
+  color: #111827;
+  text-decoration: none;
+  transition: background 0.1s ease;
+}
+
+.profile-dropdown a:hover {
+  background: #f9fafb;
+}
+
+/* ===========================
+   ✨ Animation
+=========================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

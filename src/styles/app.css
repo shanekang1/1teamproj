@@ -1,0 +1,95 @@
+/* 상단 네모 배너 */
+.v-banner {
+  position: fixed;
+  left: 50%;
+  top: 12px;
+  transform: translate(-50%, -10px);
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 10px 14px;
+  min-width: 260px;
+  text-align: center;
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  z-index: 1000;
+}
+.v-banner.show {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 560px;
+}
+.input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.input.error {
+  border-color: #e14a4a;
+  background: #fff6f6;
+}
+.help {
+  font-size: 12px;
+  color: #666;
+}
+.help.error {
+  color: #c62828;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.col--idcheck {
+  width: 200px;
+}
+.btn {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+.btn.primary {
+  background: #111;
+  color: #fff;
+  border: 0;
+}
+
+.idcheck-msg {
+  margin-top: 4px;
+  min-height: 18px;
+}
+.msg {
+  font-size: 12px;
+}
+.msg--bad {
+  color: #c62828;
+}
+.msg--good {
+  color: #0a7f2e;
+}
+
+.dash {
+  padding: 0 4px;
+  color: #666;
+}
+.mask {
+  color: #aaa;
+  margin-left: 2px;
+  font-family: monospace;
+}
